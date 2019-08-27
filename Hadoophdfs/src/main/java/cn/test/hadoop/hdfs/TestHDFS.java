@@ -51,6 +51,7 @@ public class TestHDFS {
         BlockLocation[] locations = fs.getFileBlockLocations(fss, 0, fss.getLen());
         for (BlockLocation b:locations) {
             System.out.println(b);
+            System.out.println("Test git");
         }
     }
 
