@@ -7,7 +7,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URI;
 
 public class TestHDFS {
@@ -51,7 +54,6 @@ public class TestHDFS {
         BlockLocation[] locations = fs.getFileBlockLocations(fss, 0, fss.getLen());
         for (BlockLocation b:locations) {
             System.out.println(b);
-            System.out.println("Test git");
         }
     }
 
