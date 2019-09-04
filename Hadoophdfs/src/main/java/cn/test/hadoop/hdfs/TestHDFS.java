@@ -25,17 +25,17 @@ public class TestHDFS {
         fs = FileSystem.get(conf);*/
 
         //
-        fs = FileSystem.get(URI.create("hdfs://mycluster"), conf, "god");
+        fs = FileSystem.get(URI.create("hdfs://mycluster"), conf, "root");
 
     }
 
     @Test
     public void mkdir() throws IOException {
-        Path dir = new Path("/qulei01");
+        Path dir = new Path("/qulei02");
         if (fs.exists(dir)) {
             fs.delete(dir, true);
         }
-        fs.mkdirs(dir);
+        //fs.mkdirs(dir);
     }
 
     @Test
