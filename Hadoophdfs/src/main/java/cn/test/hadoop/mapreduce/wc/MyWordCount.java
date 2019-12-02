@@ -17,7 +17,7 @@ public class MyWordCount {
         Configuration conf = new Configuration(true);
         GenericOptionsParser parser = new GenericOptionsParser(conf, args);
         String[] otherArgs = parser.getRemainingArgs();
-        //支持windows异构平台运行
+        //支持windows异构平台运行，采用自动获取的方式
         conf.set("mapreduce.app-submission.cross-platform", "true");
         //conf.set("mapreduce.framework.name","local");
 
